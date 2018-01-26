@@ -10,11 +10,10 @@ defmodule Schizo do
     "foo BAR"
   """
   def uppercase(string) do
-    words = String.split(string, " ")
-    words_with_index = Stream.with_index(words);
-    transformed_words = Enum.map(words_with_index, &uppercase_every_other_word/1)
-
-    Enum.join(transformed_words, " ")
+    String.split(string, " ")
+    |> Stream.with_index()
+    |> Enum.map(&uppercase_every_other_word/1)
+    |> Enum.join(" ")
   end
 
   @doc """
