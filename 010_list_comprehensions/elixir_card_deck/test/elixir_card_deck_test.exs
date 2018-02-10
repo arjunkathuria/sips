@@ -1,10 +1,10 @@
 defmodule ElixirCardDeckTest do
   use ExUnit.Case
-  doctest ElixirCardDeck
+  # doctest ElixirCardDeck
 
-  test "greets the world" do
-    assert ElixirCardDeck.hello() == :world
-  end
+  # test "greets the world" do
+  #   assert ElixirCardDeck.hello() == :world
+  # end
 
   test "generates a proper deck" do
     proper_deck = [
