@@ -10,7 +10,16 @@ defmodule ElixirCardDeck do
   # :world
   # """
   # def hello, do: :world
-  
+
+  @doc """
+  Generates the whole deck.
+  note about comprehensions.
+  A lc has two parts 
+    -a generator(s)
+    -a filter(s)
+  there can be multiple generators and filters. 
+  The generators generate the values, anything for which the filter returns false or nil is not included in the resulting list.
+  """
   def generate_deck do
     values = [:a, 2, 3, 4, 5, 6, 7, 8, 9, 10, :j, :q, :k]
     suits = [:spades, :clubs, :diamonds, :hearts]
