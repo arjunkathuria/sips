@@ -1,6 +1,15 @@
 # BankAccount
 
-**TODO: Add description**
+Models a Bank Account using Processes.
+
+ - Deposit
+ - Withraw
+ - Balance Enquiry
+ 
+ makes use of:-
+ 
+ - Command-Query Responsibility segregation (CQRS)
+ - Event Sourcing
 
 ## Installation
 
