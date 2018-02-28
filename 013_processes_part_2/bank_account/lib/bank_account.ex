@@ -42,15 +42,9 @@ defmodule BankAccount do
   end
 
   defp calculate_balance(events) do
-    deposits = sum(events |> Enum.filter(fn
-      {:deposit, _} -> true
-      {_, _} -> false
-  end))
+    deposits = sum(events |> Enum.filter(fn({type, _}) -> type == :deposit end))
 
-    withdrawals = sum(events |> Enum.filter(fn
-    {:withdraw, _} -> true
-    {_, _ } -> false
-  end))
+    withdrawals = sum(events |> Enum.filter(fn({type, _}) -> type == :withdraw end))
 
     {:balance, deposits - withdrawals}
   end
